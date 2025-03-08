@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("/Retro Gaming.ttf") format("truetype");
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 2560px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Retro Gaming", sans-serif;
 }
 
 .App-header {
@@ -18,7 +24,9 @@
 }
 
 .output {
-  height: 300px;
+  height: calc(
+    100vh - 60px - 80px
+  ); /* Adjust height to account for input-area */
   overflow-y: auto;
   border: 1px solid #ccc;
   margin-bottom: 20px;
@@ -26,14 +34,43 @@
   text-align: left;
 }
 
-form {
+.game-window {
+  position: relative;
+  padding-bottom: 80px; /* Adjust padding to match the height of the input-area */
+}
+
+.input-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-area {
+  max-width: 60ch; /* Limit width to approximately 60 characters */
+  margin: 0 auto; /* Center the container */
+  overflow-y: auto; /* Ensure content is scrollable if it exceeds the height */
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  width: 100%;
 }
 
 input {
   flex-grow: 1;
   padding: 10px;
   font-size: 16px;
+  font-family: "Retro Gaming", sans-serif;
 }
 
 button {
@@ -47,4 +84,10 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+.connection-status {
+  margin-top: 5px;
+  color: white;
+  text-align: center;
 }
