@@ -9,7 +9,7 @@
   padding: 2rem;
   text-align: center;
   font-family: "Retro Gaming", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .App-header {
@@ -70,13 +70,13 @@
 input {
   flex-grow: 1;
   padding: 10px;
-  font-size: 18px;
+  font-size: 22px;
   font-family: "Retro Gaming", sans-serif;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 22px;
   background-color: #4caf50;
   color: white;
   border: none;
@@ -91,4 +91,5 @@ button:hover {
   margin-top: 5px;
   color: white;
   text-align: center;
+  font-size: 22px;
 }
