@@ -42,8 +42,6 @@ function App() {
         );
         socketRef.current.emit("complete_registration", {
           idToken,
-          characterName,
-          clan,
         });
       } catch (error) {
         console.error("Error creating user:", error);
